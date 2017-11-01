@@ -1,28 +1,30 @@
 <html>
+
 <head>
-	<title>cartrawler</title>
-	<style media="screen" type="text/css">
-		#b_container132 {
-		 width: 1200px;
-		 border: 1px solid black;
-		}
-	</style>	
+    <title>cartrawler</title>
+    <style media="screen" type="text/css">
+    #b_container132 {
+        width: 1200px;
+        border: 1px solid black;
+    }
+    </style>
 </head>
+
 <body>
-	<div id="b_container132">
-	<iframe id="myframe" src="https://rshibli.github.io/cars" height="513" width="100%" frameborder="0" class="IBE_Car_Iframe" title="Car hire companies: National, Alamo, Sixt, Avis, Budget, Thrifty and Europcar" role="application" sandbox="allow-scripts allow-forms allow-popups allow-same-origin"></iframe>
-	</div>
+    <div id="b_container132">
+        <iframe id="myframe" src="https://rshibli.github.io/cars" height="513" width="100%" frameborder="0" class="IBE_Car_Iframe" title="Car hire companies: National, Alamo, Sixt, Avis, Budget, Thrifty and Europcar" role="application" sandbox="allow-scripts allow-forms allow-popups allow-same-origin"></iframe>
+    </div>
 </body>
 
+<script type="text/javascript">
+	function receiveMessage(event) {
+	    window.alert('yowza');
+	    // if (event.origin !== "http://example.org:8080")
+	    //   return;
+	}
+	window.addEventListener('load', function() {
+	    window.addEventListener("ctnoavail", receiveMessage, false);
+	}
+</script>
 
-	<script type="text/javascript">
-		window.addEventListener("ctnoavail", receiveMessage, false);
-
-		function receiveMessage(event){
-			window.alert('yowza');
-		  // if (event.origin !== "http://example.org:8080")
-		  //   return;
-		}
-	</script>
 </html>
-
