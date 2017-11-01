@@ -9,17 +9,23 @@
         margin: 10px;
     }
     </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
 </head>
 
 <body>
     <div id="b_container132">
         <iframe id="myframe" src="https://rshibli.github.io/cars" height="250" width="100%" frameborder="0" class="IBE_Car_Iframe" title="Car hire companies: National, Alamo, Sixt, Avis, Budget, Thrifty and Europcar" role="application"></iframe>
     </div>   
+    <ul id="notify">
+
+    </ul>
 </body>
 
 <script type="text/javascript">
 	function receiveMessage(event) {
-	    window.alert('yowza');
+	    var formattedDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+		$('#notify').append("<li>" + formattedDate + ": I've received an event with data: "+event.data+".</li>");
 	    // if (event.origin !== "http://example.org:8080")
 	    //   return;
 	}
